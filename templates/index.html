@@ -1,0 +1,41 @@
+<!-- invoke desired template -->
+{% extends 'base.html' %}
+
+{% block body %}
+
+<p>Want to know what your future holds?</p>
+<p>Enter your name, favorite color, and favorite number in the fields below.</p>
+<p>Then click 'submit' when you're ready to be amazed!</p>
+
+<form method="POST" action="/fortune">
+  <div class="row">
+    <div class="five columns">
+      <label for="user">Your name:</label>
+      <input class="u-full-width" type="text" name="user" />
+    </div>
+    <div class="three columns">
+      <label for="color">Favorite color:</label>
+      <select class="u-full-width" name="color">
+        <option>red</option>
+        <option>yellow</option>
+        <option>blue</option>
+        <option>green</option>
+      </select>
+    </div>
+    <div class="two columns">
+      <label for="number">Favorite number:</label>
+      <select class="u-full-width" name="number">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+    </div>
+    <div class="two columns">
+      <label for="submit">&nbsp;</label>
+      <input class="button-primary" type="submit">
+    </div>
+  </div>
+</form>
+
+{% endblock %}
